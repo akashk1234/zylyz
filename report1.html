@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Zylyz Consultancy Global Pvt Ltd</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="assets/vendors/feather/feather.css">
+  <link rel="stylesheet" href="assets/vendors/mdi/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="assets/vendors/ti-icons/css/themify-icons.css">
+  <link rel="stylesheet" href="assets/vendors/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="assets/vendors/typicons/typicons.css">
+  <link rel="stylesheet" href="assets/vendors/simple-line-icons/css/simple-line-icons.css">
+  <link rel="stylesheet" href="assets/vendors/css/vendor.bundle.base.css">
+  <link rel="stylesheet" href="assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.css">
+  <!-- endinject -->
+  <!-- Plugin css for this page -->
+  <link rel="stylesheet" href="assets/vendors/datatables.net-bs4/dataTables.bootstrap4.css">
+  <link rel="stylesheet" type="text/css" href="assets/js/select.dataTables.min.css">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- endinject -->
+  <link rel="shortcut icon" href="assets/images/favicon.png" />
+  <style>
+    body {
+          background-color: aliceblue; /* Background color */
+          color: white; /* Text color */
+          font-family: 'Arial', sans-serif; /* Font style */
+          margin: 0; /* Remove default margin */
+          padding: 0; /* No padding for the body */
+      }
+  
+      .main-container {
+          max-width: 1000px; /* Maximum width for the main container */
+          margin: auto; /* Center the main container */
+          padding: 10px; /* Padding for the main container */
+          background-color: aliceblue; /* Background color for the main container */
+          border-radius: 10px; /* Rounded corners for the main container */
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Shadow effect */
+      }
+  
+      .dashboard {
+          display: grid;
+          grid-template-columns: 1fr 2fr 1fr; /* Grid layout for main structure */
+          grid-template-rows: auto 1fr; /* Rows for the main content */
+          gap: 30px; /* Space between grid items */
+      }
+  
+      .container {
+          background-color: white; /* Container background color */
+          border-radius: 10px; /* Rounded corners */
+          padding: 20px; /* Padding for containers */
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+          color:black;
+      }
+  
+      .container h2 {
+          font-size: 1.2em; /* Heading font size */
+          margin: 0; /* Remove margin */
+          margin-bottom: 10px; /* Space below heading */
+      }
+  
+      .stats {
+          font-size: 1.5em; /* Font size for stats */
+          font-weight: bold; /* Bold stats */
+      }
+  
+      .percentage {
+          color: lightgreen; /* Color for percentage */
+          font-size: 0.9em; /* Font size for percentage */
+      }
+  
+      .chart-container {
+          grid-column: 2; /* Middle column for chart */
+          grid-row: 1; /* First row */
+      }
+  
+      .right-container {
+          grid-column: 3; /* Right column */
+          grid-row: 1; /* First row */
+      }
+  
+      .bottom-container {
+          grid-column: 1 / span 1; /* Full width at bottom */
+          grid-row: 2; /* Second row */
+      }
+  
+      /* Adjust the sidebar and body spacing */
+      .sidebar {
+          position: fixed; 
+          top: 0; 
+          left: 0; 
+          height: 100%; 
+          width: 250px; 
+          z-index: 1000;  
+          overflow-y: auto; 
+          padding-top: 20px; /* Reduced padding */
+          background-color: #e9e6e6;
+          color: #343a40;
+      }
+  
+      .page-body-wrapper {
+          margin-left:120px !important; /* Same width as sidebar */
+          padding-top: 20px; /* Adjusted top padding */
+          padding-bottom: 20px; /* Add some space at the bottom */
+      }  
+      .profile-photo {
+            width: 100px !important; /* Force the size */
+            height: 100px !important; /* Force the size */
+            border-radius: 50%;
+        } 
+      </style>
+</head>
+
+<body class="with-welcome-text">
+  <div class="container-scroller">
+    <!-- <div class="row p-0 m-0 proBanner" id="proBanner">
+      <div class="col-md-12 p-0 m-0">
+        <div class="card-body card-body-padding px-3 d-flex align-items-center justify-content-between">
+          <div class="ps-lg-3">
+            <div class="d-flex align-items-center justify-content-between">
+
+            </div>
+          </div>
+          <div class="d-flex align-items-center justify-content-between">
+            <a href="https://www.bootstrapdash.com/product/star-admin-pro/"><i class="ti-home me-3 text-white"></i></a>
+            <button id="bannerClose" class="btn border-0 p-0">
+              <i class="ti-close text-white"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div> -->
+    <!-- partial:partials/_navbar.html -->
+    <nav class="navbar default-layout col-lg-12 col-12 p-0 fixed-top d-flex align-items-top flex-row">
+      <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-start">
+        <div class="me-3">
+          <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-bs-toggle="minimize">
+            <span class="icon-menu"></span>
+          </button>
+        </div>
+        <div>
+          <a class="navbar-brand brand-logo" href="index.html">
+            <!-- <img src="assets/images/logo.svg" alt="logo" /> -->
+            <h2>ZYLYZ</h2>
+          </a>
+          <a class="navbar-brand brand-logo-mini" href="index.html">
+            <!-- <img src="assets/images/logo-mini.svg" alt="logo" /> -->
+          </a>
+        </div>
+      </div>
+      <!-- <div class="navbar-menu-wrapper d-flex align-items-top"> -->
+      <!-- <ul class="navbar-nav">
+            <li class="nav-item fw-semibold d-none d-lg-block ms-0">
+            
+            </li>
+          </ul>  -->
+      <div class="navbar-menu-wrapper d-flex align-items-top">
+        <ul class="navbar-nav">
+          <li class="nav-item fw-semibold d-none d-lg-block ms-0">
+            <h1 class="welcome-text">Good Morning, <span class="text-black fw-bold">Name</span></h1>
+            <h3 class="welcome-sub-text">Your performance summary this week </h3>
+          </li>
+        </ul>
+        <ul class="navbar-nav ms-auto">
+
+          <li class="nav-item d-none d-lg-block">
+            <div id="clock-container" class="input-group date datepicker navbar-date-picker">
+              <span class="input-group-addon input-group-prepend border-right">
+                <i class="fas fa-clock input-group-text calendar-icon"></i>
+              </span>
+              <span id="clock" class="form-control">00:00:00 AM</span> <!-- Clock display -->
+            </div>
+          </li>
+
+          <li class="nav-item d-none d-lg-block">
+            <div id="datepicker-popup" class="input-group date datepicker navbar-date-picker">
+              <span class="input-group-addon input-group-prepend border-right">
+                <span class="icon-calendar input-group-text calendar-icon"></span>
+              </span>
+              <input type="text" class="form-control">
+            </div>
+          </li>
+          <li class="nav-item">
+            <form class="search-form" action="#">
+              <i class="icon-search"></i>
+              <input type="search" class="form-control" placeholder="Search Here" title="Search here">
+            </form>
+          </li>
+
+          <li class="nav-item dropdown d-none d-lg-block user-dropdown">
+            <a class="nav-link" id="UserDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+              <img class="img-xs rounded-circle" src="assets/images/faces/face8.jpg" alt="Profile image">
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
+              <div class="dropdown-header text-center">
+                <img class="img-md rounded-circle" src="assets/images/faces/face8.jpg" alt="Profile image">
+                <p class="mb-1 mt-3 fw-semibold">Allen Moreno</p>
+                <p class="fw-light text-muted mb-0">allenmoreno@gmail.com</p>
+              </div>
+              <a class="dropdown-item"><i class="dropdown-item-icon mdi mdi-account-outline text-primary me-2"></i> My
+                Profile
+                <span class="badge badge-pill badge-danger"></span></a>
+              <a class="dropdown-item" id="sign-out-link">
+                <i class="dropdown-item-icon mdi mdi-power text-primary me-2"></i>
+                <div id="app">
+                  <button id="logout-button" class="btn btn-logout">Logout</button>
+                </div>
+              </a>
+
+            </div>
+          </li>
+        </ul>
+      </div>
+      <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button"
+        data-bs-toggle="offcanvas">
+        <span class="mdi mdi-menu"></span>
+      </button>
+  </div>
+
+  </nav>
+  <!-- partial -->
+
+  <div class="container-fluid page-body-wrapper" style="margin-left: 250px; padding-top: 110px;">
+    <!-- partial:partials/_sidebar.html -->
+    <nav class="sidebar sidebar-offcanvas" id="sidebar"
+      style="position: fixed; top: 0; left: 0; height: 100%; width: 250px; z-index: 1000;  overflow-y: auto; padding-top: 110px; background-color: #e9e6e6; color: #343a40;">
+      <ul class="nav">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">
+            <i class="mdi mdi-grid-large menu-icon"></i>
+            <span class="menu-title">Dashboard</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="invoice.html">
+            <i class="menu-icon fas fa-file-invoice-dollar"></i>
+            <span class="menu-title">New Invoice </span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="candidate.html">
+            <i class="menu-icon fas fa-user-tie"></i>
+            <span class="menu-title">Candidate</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="client.html">
+            <i class="menu-icon fas fa-building"></i>
+            <span class="menu-title">Clients</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="scheduling.html">
+            <i class="menu-icon fas fa-calendar-alt"></i>
+            <span class="menu-title">Interview Schedule</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="progress.html">
+            <i class="menu-icon fas fa-tasks"></i>
+            <span class="menu-title">Interview Progress</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="user.html">
+            <i class="menu-icon fas fa-user"></i>
+            <span class="menu-title">User</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="pool.html">
+            <i class="menu-icon fas fa-user"></i>
+            <span class="menu-title">Pool</span>
+          </a>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link" href="report1.html">
+              <i class="menu-icon fas fa-chart-bar"></i>
+              <span class="menu-title">Report & Analytics</span>
+          </a>
+      </li>   -->
+      </ul>
+    </nav>
+    
+</head>
+<body>
+  <div class="main-container">
+    <div class="dashboard">
+        <!-- Left Containers -->
+        <div class="container">
+            <div>
+                <img src="assets/images/faces/face13.jpg" alt="Profile Photo" class="profile-photo">
+            </div>
+            <h2>John Doe</h2>
+            <h6 class="">Recruiter Staff</h6>
+            <h6>Id:12345</h6>
+            <p><i class="fas fa-envelope icon"></i> john.doe@.com</p>
+            <p><i class="fas fa-phone icon"></i> +123 456 7890</p>
+            <p><i class="fas fa-map-marker-alt icon"></i> New York, USA</p>
+            <p class="percentage">▼ 4% vs previous period (214)</p>
+        </div>
+
+        <div class="container">
+            <h2>Recruiter Contract</h2>
+            <div class="table-responsive"> <!-- Make the table responsive -->
+                <table class="table table-striped"> <!-- Add 'table-striped' correctly -->
+                    <thead>
+                        <tr>
+                            <th>Company Name</th>
+                            <th>Contract Date</th>
+                            <th>Contract Value</th>
+                            <th>Industry</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>ABC Corp</td>
+                            <td>23/11/2023</td>
+                            <td>50000</td>
+                            <td>IT</td>
+                            <td>
+                              <div class="badge badge-opacity-success">Active</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>XYZ Ltd</td>
+                            <td>20/10/2024</td>
+                            <td>50000</td>
+                            <td>Finance</td>
+                            <td>
+                              <div class="badge badge-opacity-success">Active</div>
+                            </td>
+                        </tr>
+                        <tr>
+                          <td>Tech Solutions</td>
+                          <td>30/12/2024</td>
+                          <td>50000</td>
+                          <td>Accounts</td>
+                          <td>
+                            <div class="badge badge-opacity-success">Active</div>
+                          </td>
+                      </tr>
+                      
+                    
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="container">
+            <h2>Target Summary</h2>
+            <hr>
+            <p>
+              <i class="fas fa-flag-checkered"></i> 
+              <strong>Annual Target:</strong> ₹80 LPA
+          </p>
+          <p>
+            <i class="fas fa-trophy"></i> 
+            <strong>Current Target Achieved:</strong> 
+            <td style="text-align: center;">
+              <div class="badge badge-opacity-success">70 LPA</div>
+            </td> 
+        </p>
+        <p>
+          <i class="fas fa-money-bill-wave"></i> 
+          <strong>Revenue Achieved: ₹500000</strong>
+      </p>
+      <div>
+        <div class="d-flex justify-content-between align-items-center mb-1 max-width-progress-wrap">
+            <p class="text-success">90%</p>
+            <p>70/80</p>
+        </div>
+        <div class="progress progress-md">
+            <div class="progress-bar bg-success" role="progressbar" style="width: 90%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+    </div>
+        </div>
+
+        <!-- Chart Container -->
+        <div class="chart-container container">
+            <h2 style="color: black;">Performance Chart</h2>
+            <canvas id="userChart"></canvas>
+        </div>
+
+        <!-- Right Container -->
+        <div class="right-container container">
+            <h2>Attendance</h2>
+            <hr>
+            <p><i class="fas fa-calendar-check"></i> <strong>Total Scheduled Hours:</strong> 200 hours</p>
+            <p><i class="fas fa-clock"></i> <strong>Total Hours Worked:</strong> 185 hours</p>
+            <p><i class="fas fa-plus-circle"></i> <strong>Overtime Hours:</strong> 8 hours</p>
+            <p><i class="fas fa-minus-circle"></i> <strong>Absence Hours:</strong> 8 hours</p>
+            <p><i class="fas fa-calendar-day"></i> <strong>Average Daily Hours Worked:</strong> 8.0 hours</p>
+            <div>
+                <div class="d-flex justify-content-between align-items-center mb-1 max-width-progress-wrap">
+                    <p class="text-success">85%</p>
+                    <p>185/200</p>
+                </div>
+                <div class="progress progress-md">
+                    <div class="progress-bar bg-success" role="progressbar" style="width: 85%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Containers -->
+        <div class="bottom-container container">
+            <h2>Performance Summary</h2>
+            <hr>
+            <div class="mb-3">
+                <p><i class="fas fa-user-friends"></i> <strong>Candidates Assigned:</strong> 225</p>
+            </div>
+            <div class="mb-3">
+                <p><i class="fas fa-check-circle"></i> <strong>Candidates Placed:</strong> 215</p>
+            </div>
+            <div class="mb-3">
+                <p><i class="fas fa-building"></i> <strong>Companies Assigned:</strong> 15</p>
+            </div>
+            <div>
+              <div class="d-flex justify-content-between align-items-center mb-1 max-width-progress-wrap">
+                <p class="text-success">95%</p>
+                <p>215/225</p>
+              </div>
+              <div class="progress progress-md">
+                <div class="progress-bar bg-success" role="progressbar" style="width: 85%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>           
+        </div>
+    </div>
+</div>
+  
+
+<!-- Include Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+    // Line chart for user data over the last 30 days
+    const ctx = document.getElementById('userChart').getContext('2d');
+    const userChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['jan','feb','mar','apr','may','jun','jul','aug','sep','oct','nov','dec'],
+             datasets: [{
+                label: 'placed',
+                data: [206, 450, 490, 550, 600, 750, 800, 750, 700, 680, 620, 640, 670, 720, 760, 800, 850, 900, 850, 800, 760, 720, 690, 900, 930, 960, 980],
+                backgroundColor: 'white',
+                borderColor: 'black',
+                borderWidth: 2.5,
+                fill: true
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    ticks: {
+                        color: 'black',
+                    }
+                },
+                x: {
+                    ticks: {
+                        color: 'black',
+                    }
+                }
+            },
+            plugins: {
+                legend: {
+                    display: false
+                }
+            }
+        }
+    });
+</script>
+</div>
+<!-- main-panel ends -->
+</div>
+<!-- page-body-wrapper ends -->
+</div>
+<!-- container-scroller -->
+<!-- plugins:js -->
+<!-- Vendor JS -->
+<script src="assets/vendors/js/vendor.bundle.base.js"></script>
+<script src="assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+
+<!-- Plugin JS for this page -->
+<script src="assets/vendors/chart.js/chart.umd.js"></script>
+<script src="assets/vendors/progressbar.js/progressbar.min.js"></script>
+
+<!-- Inject JS -->
+<script src="assets/js/off-canvas.js"></script>
+<script src="assets/js/template.js"></script>
+<script src="assets/js/settings.js"></script>
+<script src="assets/js/hoverable-collapse.js"></script>
+<script src="assets/js/todolist.js"></script>
+
+<!-- Bootstrap JS (Only include one version) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Custom JS for this page -->
+<script src="assets/js/jquery.cookie.js" type="text/javascript"></script>
+<script src="assets/js/dashboard.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+
+<!-- <script src="assets/js/Chart.roundedBarCharts.js"></script> -->
+<!-- End custom js for this page-->
+
+<script>
+function updateClock() {
+const clockElement = document.getElementById('clock');
+const now = new Date();
+
+// Get hours, minutes, and seconds
+let hours = now.getHours();
+let minutes = now.getMinutes();
+let seconds = now.getSeconds();
+let period = 'AM';
+
+// Convert to 12-hour format
+if (hours >= 12) {
+  period = 'PM';
+  hours = hours > 12 ? hours - 12 : hours; // Convert 13-23 hours to 1-11 PM
+}
+if (hours === 0) {
+  hours = 12; // Midnight edge case (0:00 should be 12 AM)
+}
+
+// Ensure 2-digit format for minutes and seconds
+minutes = minutes < 10 ? '0' + minutes : minutes;
+seconds = seconds < 10 ? '0' + seconds : seconds;
+
+// Update clock display
+clockElement.textContent = `${hours}:${minutes}:${seconds} ${period}`;
+}
+
+// Update the clock every second
+setInterval(updateClock, 1000);
+
+// Initialize the clock display immediately
+updateClock();
+</script>
+<script>
+// Function to handle form submission
+function submitForm(event) {
+event.preventDefault(); // Prevent the form from submitting traditionally
+
+// Show the modal after submission
+var modal = new bootstrap.Modal(document.getElementById('popupModal'));
+modal.show();
+}
+
+// Function to close the modal
+function closeModal() {
+var modal = bootstrap.Modal.getInstance(document.getElementById('popupModal'));
+modal.hide();
+}
+</script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Zylyz Consultancy Global Pvt Ltd</title>
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="assets/vendors/feather/feather.css">
+    <link rel="stylesheet" href="assets/vendors/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="assets/vendors/ti-icons/css/themify-icons.css">
+    <link rel="stylesheet" href="assets/vendors/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/vendors/typicons/typicons.css">
+    <link rel="stylesheet" href="assets/vendors/simple-line-icons/css/simple-line-icons.css">
+    <link rel="stylesheet" href="assets/vendors/css/vendor.bundle.base.css">
+    <link rel="stylesheet" href="assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.css">
+    <!-- endinject -->
+    <!-- Plugin css for this page -->
+    <link rel="stylesheet" href="assets/vendors/data
+    tables.net-bs4/dataTables.bootstrap4.css">
+    <link rel="stylesheet" type="text/css" href="assets/js/select.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- endinject -->
+    <link rel="shortcut icon" href="assets/images/favicon.png" />
+    <style>
+        .card-hover {
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .card-hover:hover {
+            transform: scale(1.05); /* Slightly enlarge the card */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Add shadow effect */
+        }
+        
+    </style>
+    
+</head>
+
+<body class="with-welcome-text">
+    <div class="container-scroller">
+
+    </div>
+    <!-- partial:partials/_navbar.html -->
+    <nav class="navbar default-layout col-lg-12 col-12 p-0 fixed-top d-flex align-items-top flex-row">
+        <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-start">
+            <div class="me-3">
+                <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-bs-toggle="minimize">
+                    <span class="icon-menu"></span>
+                </button>
+            </div>
+            <div>
+                <a class="navbar-brand brand-logo" href="index.html">
+                    <h2>ZYLYZ</h2>
+                </a>
+                <a class="navbar-brand brand-logo-mini" href="index.html">
+                </a>
+            </div>
+        </div>
+
+        <div class="navbar-menu-wrapper d-flex align-items-top">
+            <ul class="navbar-nav">
+                <li class="nav-item fw-semibold d-none d-lg-block ms-0">
+                    <h1 class="welcome-text">Good Morning, <span class="text-black fw-bold">Name</span></h1>
+                    <h3 class="welcome-sub-text">Your performance summary this week </h3>
+                </li>
+            </ul>
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item d-none d-lg-block">
+                    <div id="clock-container" class="input-group date datepicker navbar-date-picker">
+                        <span class="input-group-addon input-group-prepend border-right">
+                            <i class="fas fa-clock input-group-text calendar-icon"></i>
+                        </span>
+                        <span id="clock" class="form-control">00:00:00 AM</span> <!-- Clock display -->
+                    </div>
+                </li>
+
+                <li class="nav-item d-none d-lg-block">
+                    <div id="datepicker-popup" class="input-group date datepicker navbar-date-picker">
+                        <span class="input-group-addon input-group-prepend border-right">
+                            <span class="icon-calendar input-group-text calendar-icon"></span>
+                        </span>
+                        <input type="text" class="form-control">
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <form class="search-form" action="#">
+                        <i class="icon-search"></i>
+                        <input type="search" class="form-control" placeholder="Search Here" title="Search here">
+                    </form>
+                </li>
+
+                <li class="nav-item dropdown d-none d-lg-block user-dropdown">
+                    <a class="nav-link" id="UserDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img class="img-xs rounded-circle" src="assets/images/faces/face8.jpg" alt="Profile image">
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
+                        <div class="dropdown-header text-center">
+                            <img class="img-md rounded-circle" src="assets/images/faces/face8.jpg" alt="Profile image">
+                            <p class="mb-1 mt-3 fw-semibold">Allen Moreno</p>
+                            <p class="fw-light text-muted mb-0">allenmoreno@gmail.com</p>
+                        </div>
+                        <a class="dropdown-item" href="profile.html">
+                            <i class="dropdown-item-icon mdi mdi-account-outline text-primary me-2"></i>
+                            My Profile
+                            <span class="badge badge-pill badge-danger"></span>
+                        </a>
+
+                        <a class="dropdown-item" id="sign-out-link">
+                            <i class="dropdown-item-icon mdi mdi-power text-primary me-2"></i>
+                            <div id="app">
+                                <button id="logout-button" class="btn btn-logout">Logout</button>
+                            </div>
+                        </a>
+
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button"
+            data-bs-toggle="offcanvas">
+            <span class="mdi mdi-menu"></span>
+        </button>
+        </div>
+
+    </nav>
+    <!-- partial -->
+
+    <div class="container-fluid page-body-wrapper" style="margin-left: 250px; padding-top: 110px;">
+        <!-- partial:partials/_sidebar.html -->
+        <nav class="sidebar sidebar-offcanvas" id="sidebar"
+            style="position: fixed; top: 0; left: 0; height: 100%; width: 250px; z-index: 1000;  overflow-y: auto; padding-top: 110px;  background-color: #e9e6e6; color: #343a40;">
+            <ul class="nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">
+                        <i class="mdi mdi-grid-large menu-icon"></i>
+                        <span class="menu-title">Dashboard</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="invoice.html">
+                        <i class="menu-icon fas fa-file-invoice-dollar"></i>
+                        <span class="menu-title">New Invoice </span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="candidate.html">
+                        <i class="menu-icon fas fa-user-tie"></i>
+                        <span class="menu-title">Candidate</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="client.html">
+                        <i class="menu-icon fas fa-building"></i>
+                        <span class="menu-title">Clients</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="scheduling.html">
+                        <i class="menu-icon fas fa-calendar-alt"></i>
+                        <span class="menu-title">Interview Schedule</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="progress.html">
+                        <i class="menu-icon fas fa-tasks"></i>
+                        <span class="menu-title">Interview Progress</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="user.html">
+                        <i class="menu-icon fas fa-user"></i>
+                        <span class="menu-title">User</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="pool.html">
+                        <i class="menu-icon fas fa-user"></i>
+                        <span class="menu-title">Pool</span>
+                    </a>
+                </li>
+                <!-- <li class="nav-item">
+                    <a class="nav-link" href="report1.html">
+                        <i class="menu-icon fas fa-chart-bar"></i>
+                        <span class="menu-title">Report & Analytics</span>
+                    </a>
+                </li>  -->
+            </ul>
+        </nav>
+
+
+        <div class="main-panel">
+            <div class="content-wrapper">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="row">
+
+                            <div class="col-md-4 col-lg-2 mb-3">
+                                <div class="card text-center">
+                                    <a href="candidate.html" style="text-decoration: none;">
+                                        <div class="card-body text-center" style="cursor: pointer;">
+                                            <i class="fas fa-user-tie" style="color: #007bff;"></i>
+                                            <p class="statistics-title mt-2" style="color: black;">Applicants</p>
+                                            <h3 class="rate-percentage" style="font-size: large;">50</h3>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-4 col-lg-2 mb-3">
+                                <div class="card text-center">
+                                    <a href="pool.html" style="text-decoration: none;">
+                                        <div class="card-body text-center" style="cursor: pointer;">
+                                            <i class="fas fa-building" style="color: #007bff;"></i>
+                                            <p class="statistics-title mt-2" style="color: black;">Active Jobs</p>
+                                            <h3 class="rate-percentage" style="font-size: large;">60</h3>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 col-lg-2 mb-3">
+                                <div class="card text-center">
+                                    <a href="scheduling.html" style="text-decoration: none;">
+                                        <div class="card-body text-center" style="cursor: pointer;">
+                                            <i class="fas fa-calendar-alt" style="color: #007bff;"></i>
+                                            <p class="statistics-title mt-2" style="color: black;">Interview </p>
+                                            <h3 class="rate-percentage" style="font-size: large;">30</h3>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 col-lg-2 mb-3 d-none d-md-block ">
+                                <div class="card text-center">
+                                    <a href="progress.html" style="text-decoration: none;">
+                                        <div class="card-body text-center" style="cursor: pointer;">
+                                            <i class="fas fa-tasks " style="color: #007bff;"></i>
+                                            <p class="statistics-title mt-2" style="color: black;">Progress</p>
+                                            <h3 class="rate-percentage" style="font-size: large;">25</h3>
+                                        </div>
+                                    </a>
+
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 col-lg-2 mb-3 d-none d-md-block">
+                                <div class="card text-center">
+                                    <a href="user.html" style="text-decoration: none;">
+                                        <div class="card-body text-center" style="cursor: pointer;">
+                                            <i class="menu-icon fas fa-user" style="color: #007bff;"></i>
+                                            <p class="statistics-title mt-2" style="color: black;">User</p>
+                                            <h3 class="rate-percentage" style="font-size: large;">40</h3>
+                                        </div>
+                                    </a>
+
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-lg-2 mb-3 d-none d-md-block">
+                                <div class="card text-center">
+                                    <a href="client.html" style="text-decoration: none;">
+                                        <div class="card-body text-center" style="cursor: pointer;">
+                                            <i class="menu-icon fas fa-user" style="color: #007bff;"></i>
+                                            <p class="statistics-title mt-2" style="color: black;">Clients</p>
+                                            <h3 class="rate-percentage" style="font-size: large;">40</h3>
+                                        </div>
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="main-panel">
+                        <div class="content-wrapper" style="padding-left: 0px;">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="home-tab">
+                                        <div class="d-sm-flex align-items-center justify-content-between border-bottom">
+                                            <!-- Tabs Navigation -->
+                                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                                <li class="nav-item">
+                                                    <a class="nav-link active" id="all-tab" data-bs-toggle="tab"
+                                                        href="#all" role="tab" aria-controls="all"
+                                                        aria-selected="true">All</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" id="kochi-tab" data-bs-toggle="tab"
+                                                        href="#kochi" role="tab" aria-controls="kochi"
+                                                        aria-selected="false">Kochi</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" id="hyderabad-tab" data-bs-toggle="tab"
+                                                        href="#hyderabad" role="tab" aria-controls="hyderabad"
+                                                        aria-selected="false">Hyderabad</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" id="bangalore-tab" data-bs-toggle="tab"
+                                                        href="#bangalore" role="tab" aria-controls="bangalore"
+                                                        aria-selected="false">Bangalore</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+
+
+                                        <div class="tab-content mt-3">
+                                            <!-- All Section (6 Cards) -->
+                                            <div class="tab-pane fade show active" id="all" role="tabpanel"
+                                                aria-labelledby="all-tab">
+                                                <div class="row">
+                                                    <!-- Card 1 -->
+                                                    <div class="col-md-4 mb-4">
+                                                        <a href="profile-admin.html" style="text-decoration: none;">
+                                                            <div class="card card-rounded card-hover" style="border-radius: 10px; height: 300px; overflow: hidden;">
+                                                                <div class="card-body card-rounded"
+                                                                    style="padding: 15px;">
+                                                                    <div class="d-flex align-items-start">
+                                                                        <div style="position: relative;">
+                                                                            <img src="assets/images/faces/face15.jpg"
+                                                                                style="width: 60px; height: 60px; border-radius: 50%;">
+                                                                            <span
+                                                                                style="width: 12px; height: 12px; background-color: green; border-radius: 50%; position: absolute; top: 0; right: 0; border: 2px solid white;"></span>
+                                                                        </div>
+                                                                        <div class="ms-3">
+                                                                            <p class="card-title card-title-dash mb-1"
+                                                                                style="font-size: 1rem;">Ava Gold</p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="mt-2">
+                                                                        <p class="mb-1 fw-medium">Position: Admin</p>
+                                                                        <p class="mb-1 fw-medium"><b>10</b></p>
+                                                                        <p>Active jobs</p>
+                                                                        <p class="mb-1 fw-medium"><b>15</b></p>
+                                                                        <p>Applicants</p>
+                                                                        <p class="mb-1 fw-medium"><b>5</b></p>
+                                                                        <p>Interviews</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+
+                                                    <!-- Card 2 -->
+                                                    <div class="col-md-4 mb-4">
+                                                        <a href="profile-admin.html" style="text-decoration: none;">
+                                                            <div class="card card-rounded card-hover" style="border-radius: 10px; height: 300px; overflow: hidden;">
+                                                                <div class="card-body card-rounded"
+                                                                    style="padding: 15px;">
+                                                                    <div class="d-flex align-items-start">
+                                                                        <div style="position: relative;">
+                                                                            <img src="assets/images/faces/face16.jpg"
+                                                                                style="width: 60px; height: 60px; border-radius: 50%;">
+                                                                            <span
+                                                                                style="width: 12px; height: 12px; background-color: green; border-radius: 50%; position: absolute; top: 0; right: 0; border: 2px solid white;"></span>
+                                                                        </div>
+                                                                        <div class="ms-3">
+                                                                            <p class="card-title card-title-dash mb-1"
+                                                                                style="font-size: 1rem;">Liam Silver</p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="mt-2">
+                                                                        <p class="mb-1 fw-medium">Position: Sales</p>
+                                                                        <p class="mb-1 fw-medium"><b>12</b></p>
+                                                                        <p>Active jobs</p>
+                                                                        <p class="mb-1 fw-medium"><b>18</b></p>
+                                                                        <p>Applicants</p>
+                                                                        <p class="mb-1 fw-medium"><b>10</b></p>
+                                                                        <p>Interviews</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+
+
+                                                    <!-- Card 3 -->
+                                                    <div class="col-md-4 mb-4">
+                                                        <a href="profile-admin.html" style="text-decoration: none;">
+                                                            <div class="card card-rounded card-hover" style="border-radius: 10px; height: 300px; overflow: hidden;">
+                                                                <div class="card-body card-rounded"
+                                                                    style="padding: 15px;">
+                                                                    <div class="d-flex align-items-start">
+                                                                        <div style="position: relative;">
+                                                                            <img src="assets/images/faces/face17.jpg"
+                                                                                style="width: 60px; height: 60px; border-radius: 50%;">
+                                                                            <span
+                                                                                style="width: 12px; height: 12px; background-color: green; border-radius: 50%; position: absolute; top: 0; right: 0; border: 2px solid white;"></span>
+                                                                        </div>
+                                                                        <div class="ms-3">
+                                                                            <p class="card-title card-title-dash mb-1"
+                                                                                style="font-size: 1rem;">Mia Bronze</p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="mt-2">
+                                                                        <p class="mb-1 fw-medium">Position: Recruiter
+                                                                        </p>
+                                                                        <p class="mb-1 fw-medium"><b>8</b></p>
+                                                                        <p>Active jobs</p>
+                                                                        <p class="mb-1 fw-medium"><b>20</b></p>
+                                                                        <p>Applicants</p>
+                                                                        <p class="mb-1 fw-medium"><b>12</b></p>
+                                                                        <p>Interviews</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+
+
+
+                                                    <!-- Card 4 -->
+                                                    <div class="col-md-4 mb-4">
+                                                        <a href="profile-admin.html" style="text-decoration: none;">
+                                                            <div class="card card-rounded card-hover" style="border-radius: 10px; height: 300px; overflow: hidden;">
+                                                                <div class="card-body card-rounded"
+                                                                    style="padding: 15px;">
+                                                                    <div class="d-flex align-items-start">
+                                                                        <div style="position: relative;">
+                                                                            <img src="assets/images/faces/face18.jpg"
+                                                                                style="width: 60px; height: 60px; border-radius: 50%;">
+                                                                            <span
+                                                                                style="width: 12px; height: 12px; background-color: red; border-radius: 50%; position: absolute; top: 0; right: 0; border: 2px solid white;"></span>
+                                                                        </div>
+                                                                        <div class="ms-3">
+                                                                            <p class="card-title card-title-dash mb-1"
+                                                                                style="font-size: 1rem;">James Gold</p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="mt-2">
+                                                                        <p class="mb-1 fw-medium">Position: Admin</p>
+                                                                        <p class="mb-1 fw-medium"><b>14</b></p>
+                                                                        <p>Active jobs</p>
+                                                                        <p class="mb-1 fw-medium"><b>24</b></p>
+                                                                        <p>Applicants</p>
+                                                                        <p class="mb-1 fw-medium"><b>16</b></p>
+                                                                        <p>Interviews</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+
+
+                                                    <!-- Card 5 -->
+                                                    <div class="col-md-4 mb-4">
+                                                        <a href="profile-admin.html" style="text-decoration: none;">
+                                                            <div class="card card-rounded card-hover" style="border-radius: 10px; height: 300px; overflow: hidden;">
+                                                                <div class="card-body card-rounded"
+                                                                    style="padding: 15px;">
+                                                                    <div class="d-flex align-items-start">
+                                                                        <div style="position: relative;">
+                                                                            <img src="assets/images/faces/face19.jpg"
+                                                                                style="width: 60px; height: 60px; border-radius: 50%;">
+                                                                            <span
+                                                                                style="width: 12px; height: 12px; background-color: green; border-radius: 50%; position: absolute; top: 0; right: 0; border: 2px solid white;"></span>
+                                                                        </div>
+                                                                        <div class="ms-3">
+                                                                            <p class="card-title card-title-dash mb-1"
+                                                                                style="font-size: 1rem;">Sophia Silver
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="mt-2">
+                                                                        <p class="mb-1 fw-medium">Position: Sales</p>
+                                                                        <p class="mb-1 fw-medium"><b>11</b></p>
+                                                                        <p>Active jobs</p>
+                                                                        <p class="mb-1 fw-medium"><b>22</b></p>
+                                                                        <p>Applicants</p>
+                                                                        <p class="mb-1 fw-medium"><b>14</b></p>
+                                                                        <p>Interviews</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+
+                                                    <!-- Card 6 -->
+                                                    <div class="col-md-4 mb-4">
+                                                        <a href="profile-admin.html" style="text-decoration: none;">
+                                                            <div class="card card-rounded card-hover" style="border-radius: 10px; height: 300px; overflow: hidden;">
+                                                                <div class="card-body card-rounded"
+                                                                    style="padding: 15px;">
+                                                                    <div class="d-flex align-items-start">
+                                                                        <div style="position: relative;">
+                                                                            <img src="assets/images/faces/face20.jpg"
+                                                                                style="width: 60px; height: 60px; border-radius: 50%;">
+                                                                            <span
+                                                                                style="width: 12px; height: 12px; background-color: green; border-radius: 50%; position: absolute; top: 0; right: 0; border: 2px solid white;"></span>
+                                                                        </div>
+                                                                        <div class="ms-3">
+                                                                            <p class="card-title card-title-dash mb-1"
+                                                                                style="font-size: 1rem;">Benjamin Bronze
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="mt-2">
+                                                                        <p class="mb-1 fw-medium">Position: Admin</p>
+                                                                        <p class="mb-1 fw-medium"><b>9</b></p>
+                                                                        <p>Active jobs</p>
+                                                                        <p class="mb-1 fw-medium"><b>16</b></p>
+                                                                        <p>Applicants</p>
+                                                                        <p class="mb-1 fw-medium"><b>8</b></p>
+                                                                        <p>Interviews</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+
+                                                    <!-- Card 7 -->
+                                                    <div class="col-md-4 mb-4">
+                                                        <a href="profile-admin.html" style="text-decoration: none;">
+                                                            <div class="card card-rounded card-hover" style="border-radius: 10px; height: 300px; overflow: hidden;">
+                                                                <div class="card-body card-rounded"
+                                                                    style="padding: 15px;">
+                                                                    <div class="d-flex align-items-start">
+                                                                        <div style="position: relative;">
+                                                                            <img src="assets/images/faces/face21.jpg"
+                                                                                style="width: 60px; height: 60px; border-radius: 50%;">
+                                                                            <span
+                                                                                style="width: 12px; height: 12px; background-color: green; border-radius: 50%; position: absolute; top: 0; right: 0; border: 2px solid white;"></span>
+                                                                        </div>
+                                                                        <div class="ms-3">
+                                                                            <p class="card-title card-title-dash mb-1"
+                                                                                style="font-size: 1rem;">Charlotte Gold
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="mt-2">
+                                                                        <p class="mb-1 fw-medium">Position: Sales</p>
+                                                                        <p class="mb-1 fw-medium"><b>13</b></p>
+                                                                        <p>Active jobs</p>
+                                                                        <p class="mb-1 fw-medium"><b>25</b></p>
+                                                                        <p>Applicants</p>
+                                                                        <p class="mb-1 fw-medium"><b>18</b></p>
+                                                                        <p>Interviews</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+
+                                                    <!-- Card 8 -->
+                                                    <div class="col-md-4 mb-4">
+                                                        <a href="profile-admin.html" style="text-decoration: none;">
+                                                            <div class="card card-rounded card-hover" style="border-radius: 10px; height: 300px; overflow: hidden;">
+                                                                <div class="card-body card-rounded"
+                                                                    style="padding: 15px;">
+                                                                    <div class="d-flex align-items-start">
+                                                                        <div style="position: relative;">
+                                                                            <img src="assets/images/faces/face22.jpg"
+                                                                                style="width: 60px; height: 60px; border-radius: 50%;">
+                                                                            <span
+                                                                                style="width: 12px; height: 12px; background-color: green; border-radius: 50%; position: absolute; top: 0; right: 0; border: 2px solid white;"></span>
+                                                                        </div>
+                                                                        <div class="ms-3">
+                                                                            <p class="card-title card-title-dash mb-1"
+                                                                                style="font-size: 1rem;">Amelia Silver
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="mt-2">
+                                                                        <p class="mb-1 fw-medium">Position: Recruiter
+                                                                        </p>
+                                                                        <p class="mb-1 fw-medium"><b>16</b></p>
+                                                                        <p>Active jobs</p>
+                                                                        <p class="mb-1 fw-medium"><b>20</b></p>
+                                                                        <p>Applicants</p>
+                                                                        <p class="mb-1 fw-medium"><b>12</b></p>
+                                                                        <p>Interviews</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+
+                                                    <!-- Card 9 -->
+                                                    <div class="col-md-4 mb-4">
+                                                        <a href="profile-admin.html" style="text-decoration: none;">
+                                                            <div class="card card-rounded card-hover" style="border-radius: 10px; height: 300px; overflow: hidden;">
+                                                                <div class="card-body card-rounded"
+                                                                    style="padding: 15px;">
+                                                                    <div class="d-flex align-items-start">
+                                                                        <div style="position: relative;">
+                                                                            <img src="assets/images/faces/face23.jpg"
+                                                                                style="width: 60px; height: 60px; border-radius: 50%;">
+                                                                            <span
+                                                                                style="width: 12px; height: 12px; background-color: red; border-radius: 50%; position: absolute; top: 0; right: 0; border: 2px solid white;"></span>
+                                                                        </div>
+                                                                        <div class="ms-3">
+                                                                            <p class="card-title card-title-dash mb-1"
+                                                                                style="font-size: 1rem;">Henry Bronze
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="mt-2">
+                                                                        <p class="mb-1 fw-medium">Position: Recruiter
+                                                                        </p>
+                                                                        <p class="mb-1 fw-medium"><b>9</b></p>
+                                                                        <p>Active jobs</p>
+                                                                        <p class="mb-1 fw-medium"><b>15</b></p>
+                                                                        <p>Applicants</p>
+                                                                        <p class="mb-1 fw-medium"><b>6</b></p>
+                                                                        <p>Interviews</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Kochi Section (3 Cards) -->
+                                            <div class="tab-pane fade" id="kochi" role="tabpanel"
+                                                aria-labelledby="kochi-tab">
+                                                <div class="row">
+                                                    <!-- Card 1 -->
+                                                    <div class="col-md-4 mb-4">
+                                                        <a href="profile-admin.html" style="text-decoration: none;">
+                                                            <div class="card card-rounded card-hover" style="border-radius: 10px; height: 300px; overflow: hidden;">
+                                                                <div class="card-body card-rounded"
+                                                                    style="padding: 15px;">
+                                                                    <div class="d-flex align-items-start">
+                                                                        <div style="position: relative;">
+                                                                            <img src="assets/images/faces/face15.jpg"
+                                                                                style="width: 60px; height: 60px; border-radius: 50%;">
+                                                                            <span
+                                                                                style="width: 12px; height: 12px; background-color: green; border-radius: 50%; position: absolute; top: 0; right: 0; border: 2px solid white;"></span>
+                                                                        </div>
+                                                                        <div class="ms-3">
+                                                                            <p class="card-title card-title-dash mb-1"
+                                                                                style="font-size: 1rem;">Ava Gold</p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="mt-2">
+                                                                        <p class="mb-1 fw-medium">Position: Admin</p>
+                                                                        <p class="mb-1 fw-medium"><b>10</b></p>
+                                                                        <p>Active jobs</p>
+                                                                        <p class="mb-1 fw-medium"><b>15</b></p>
+                                                                        <p>Applicants</p>
+                                                                        <p class="mb-1 fw-medium"><b>5</b></p>
+                                                                        <p>Interviews</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+
+                                                    <!-- Card 2 -->
+                                                    <div class="col-md-4 mb-4">
+                                                        <a href="profile-admin.html" style="text-decoration: none;">
+                                                            <div class="card card-rounded card-hover" style="border-radius: 10px; height: 300px; overflow: hidden;">
+                                                                <div class="card-body card-rounded"
+                                                                    style="padding: 15px;">
+                                                                    <div class="d-flex align-items-start">
+                                                                        <div style="position: relative;">
+                                                                            <img src="assets/images/faces/face16.jpg"
+                                                                                style="width: 60px; height: 60px; border-radius: 50%;">
+                                                                            <span
+                                                                                style="width: 12px; height: 12px; background-color: green; border-radius: 50%; position: absolute; top: 0; right: 0; border: 2px solid white;"></span>
+                                                                        </div>
+                                                                        <div class="ms-3">
+                                                                            <p class="card-title card-title-dash mb-1"
+                                                                                style="font-size: 1rem;">Liam Silver</p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="mt-2">
+                                                                        <p class="mb-1 fw-medium">Position: Sales</p>
+                                                                        <p class="mb-1 fw-medium"><b>12</b></p>
+                                                                        <p>Active jobs</p>
+                                                                        <p class="mb-1 fw-medium"><b>18</b></p>
+                                                                        <p>Applicants</p>
+                                                                        <p class="mb-1 fw-medium"><b>10</b></p>
+                                                                        <p>Interviews</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+
+                                                    <!-- Card 3 -->
+                                                    <div class="col-md-4 mb-4">
+                                                        <a href="profile-admin.html" style="text-decoration: none;">
+                                                            <div class="card card-rounded card-hover" style="border-radius: 10px; height: 300px; overflow: hidden;">
+                                                                <div class="card-body card-rounded"
+                                                                    style="padding: 15px;">
+                                                                    <div class="d-flex align-items-start">
+                                                                        <div style="position: relative;">
+                                                                            <img src="assets/images/faces/face17.jpg"
+                                                                                style="width: 60px; height: 60px; border-radius: 50%;">
+                                                                            <span
+                                                                                style="width: 12px; height: 12px; background-color: green; border-radius: 50%; position: absolute; top: 0; right: 0; border: 2px solid white;"></span>
+                                                                        </div>
+                                                                        <div class="ms-3">
+                                                                            <p class="card-title card-title-dash mb-1"
+                                                                                style="font-size: 1rem;">Mia Bronze</p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="mt-2">
+                                                                        <p class="mb-1 fw-medium">Position: Recruiter
+                                                                        </p>
+                                                                        <p class="mb-1 fw-medium"><b>8</b></p>
+                                                                        <p>Active jobs</p>
+                                                                        <p class="mb-1 fw-medium"><b>20</b></p>
+                                                                        <p>Applicants</p>
+                                                                        <p class="mb-1 fw-medium"><b>12</b></p>
+                                                                        <p>Interviews</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Hyderabad Section (3 Cards) -->
+                                            <div class="tab-pane fade" id="hyderabad" role="tabpanel"
+                                                aria-labelledby="hyderabad-tab">
+                                                <div class="row">
+                                                    <!-- Card 1 -->
+                                                    <div class="col-md-4 mb-4">
+                                                        <a href="profile-admin.html" style="text-decoration: none;">
+                                                            <div class="card card-rounded card-hover" style="border-radius: 10px; height: 300px; overflow: hidden;">
+                                                                <div class="card-body card-rounded"
+                                                                    style="padding: 15px;">
+                                                                    <div class="d-flex align-items-start">
+                                                                        <div style="position: relative;">
+                                                                            <img src="assets/images/faces/face18.jpg"
+                                                                                style="width: 60px; height: 60px; border-radius: 50%;">
+                                                                            <span
+                                                                                style="width: 12px; height: 12px; background-color: red; border-radius: 50%; position: absolute; top: 0; right: 0; border: 2px solid white;"></span>
+                                                                        </div>
+                                                                        <div class="ms-3">
+                                                                            <p class="card-title card-title-dash mb-1"
+                                                                                style="font-size: 1rem;">James Gold</p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="mt-2">
+                                                                        <p class="mb-1 fw-medium">Position: Admin
+                                                                        </p>
+                                                                        <p class="mb-1 fw-medium"><b>14</b></p>
+                                                                        <p>Active jobs</p>
+                                                                        <p class="mb-1 fw-medium"><b>24</b></p>
+                                                                        <p>Applicants</p>
+                                                                        <p class="mb-1 fw-medium"><b>16</b></p>
+                                                                        <p>Interviews</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+
+                                                    <!-- Card 2 -->
+                                                    <div class="col-md-4 mb-4">
+                                                        <a href="profile-admin.html" style="text-decoration: none;">
+                                                            <div class="card card-rounded card-hover" style="border-radius: 10px; height: 300px; overflow: hidden;">
+                                                                <div class="card-body card-rounded"
+                                                                    style="padding: 15px;">
+                                                                    <div class="d-flex align-items-start">
+                                                                        <div style="position: relative;">
+                                                                            <img src="assets/images/faces/face19.jpg"
+                                                                                style="width: 60px; height: 60px; border-radius: 50%;">
+                                                                            <span
+                                                                                style="width: 12px; height: 12px; background-color: green; border-radius: 50%; position: absolute; top: 0; right: 0; border: 2px solid white;"></span>
+                                                                        </div>
+                                                                        <div class="ms-3">
+                                                                            <p class="card-title card-title-dash mb-1"
+                                                                                style="font-size: 1rem;">Sophia Silver
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="mt-2">
+                                                                        <p class="mb-1 fw-medium">Position: Sales</p>
+                                                                        <p class="mb-1 fw-medium"><b>11</b></p>
+                                                                        <p>Active jobs</p>
+                                                                        <p class="mb-1 fw-medium"><b>22</b></p>
+                                                                        <p>Applicants</p>
+                                                                        <p class="mb-1 fw-medium"><b>14</b></p>
+                                                                        <p>Interviews</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+
+                                                    <!-- Card 3 -->
+                                                    <div class="col-md-4 mb-4">
+                                                        <a href="profile-admin.html" style="text-decoration: none;">
+                                                            <div class="card card-rounded card-hover" style="border-radius: 10px; height: 300px; overflow: hidden;">
+                                                                <div class="card-body card-rounded"
+                                                                    style="padding: 15px;">
+                                                                    <div class="d-flex align-items-start">
+                                                                        <div style="position: relative;">
+                                                                            <img src="assets/images/faces/face20.jpg"
+                                                                                style="width: 60px; height: 60px; border-radius: 50%;">
+                                                                            <span
+                                                                                style="width: 12px; height: 12px; background-color: green; border-radius: 50%; position: absolute; top: 0; right: 0; border: 2px solid white;"></span>
+                                                                        </div>
+                                                                        <div class="ms-3">
+                                                                            <p class="card-title card-title-dash mb-1"
+                                                                                style="font-size: 1rem;">Benjamin Bronze
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="mt-2">
+                                                                        <p class="mb-1 fw-medium">Position: Recruiter
+                                                                        </p>
+                                                                        <p class="mb-1 fw-medium"><b>9</b></p>
+                                                                        <p>Active jobs</p>
+                                                                        <p class="mb-1 fw-medium"><b>16</b></p>
+                                                                        <p>Applicants</p>
+                                                                        <p class="mb-1 fw-medium"><b>8</b></p>
+                                                                        <p>Interviews</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Bangalore Section (3 Cards) -->
+                                            <div class="tab-pane fade" id="bangalore" role="tabpanel"
+                                                aria-labelledby="bangalore-tab">
+                                                <div class="row">
+                                                    <!-- Card 1 -->
+                                                    <div class="col-md-4 mb-4">
+                                                        <a href="profile-admin.html" style="text-decoration: none;">
+                                                            <div class="card card-rounded card-hover" style="border-radius: 10px; height: 300px; overflow: hidden;">
+                                                                <div class="card-body card-rounded"
+                                                                    style="padding: 15px;">
+                                                                    <div class="d-flex align-items-start">
+                                                                        <div style="position: relative;">
+                                                                            <img src="assets/images/faces/face21.jpg"
+                                                                                style="width: 60px; height: 60px; border-radius: 50%;">
+                                                                            <span
+                                                                                style="width: 12px; height: 12px; background-color: green; border-radius: 50%; position: absolute; top: 0; right: 0; border: 2px solid white;"></span>
+                                                                        </div>
+                                                                        <div class="ms-3">
+                                                                            <p class="card-title card-title-dash mb-1"
+                                                                                style="font-size: 1rem;">Charlotte Gold
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="mt-2">
+                                                                        <p class="mb-1 fw-medium">Position: Admin</p>
+                                                                        <p class="mb-1 fw-medium"><b>13</b></p>
+                                                                        <p>Active jobs</p>
+                                                                        <p class="mb-1 fw-medium"><b>25</b></p>
+                                                                        <p>Applicants</p>
+                                                                        <p class="mb-1 fw-medium"><b>18</b></p>
+                                                                        <p>Interviews</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+
+                                                    <!-- Card 2 -->
+                                                    <div class="col-md-4 mb-4">
+                                                        <a href="profile-admin.html" style="text-decoration: none;">
+                                                            <div class="card card-rounded card-hover" style="border-radius: 10px; height: 300px; overflow: hidden;">
+                                                                <div class="card-body card-rounded"
+                                                                    style="padding: 15px;">
+                                                                    <div class="d-flex align-items-start">
+                                                                        <div style="position: relative;">
+                                                                            <img src="assets/images/faces/face22.jpg"
+                                                                                style="width: 60px; height: 60px; border-radius: 50%;">
+                                                                            <span
+                                                                                style="width: 12px; height: 12px; background-color: green; border-radius: 50%; position: absolute; top: 0; right: 0; border: 2px solid white;"></span>
+                                                                        </div>
+                                                                        <div class="ms-3">
+                                                                            <p class="card-title card-title-dash mb-1"
+                                                                                style="font-size: 1rem;">Amelia Silver
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="mt-2">
+                                                                        <p class="mb-1 fw-medium">Position: Sales</p>
+                                                                        <p class="mb-1 fw-medium"><b>16</b></p>
+                                                                        <p>Active jobs</p>
+                                                                        <p class="mb-1 fw-medium"><b>20</b></p>
+                                                                        <p>Applicants</p>
+                                                                        <p class="mb-1 fw-medium"><b>12</b></p>
+                                                                        <p>Interviews</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+
+                                                    <!-- Card 3 -->
+                                                    <div class="col-md-4 mb-4">
+                                                        <a href="profile-admin.html" style="text-decoration: none;">
+                                                            <div class="card card-rounded card-hover" style="border-radius: 10px; height: 300px; overflow: hidden;">
+                                                                <div class="card-body card-rounded"
+                                                                    style="padding: 15px;">
+                                                                    <div class="d-flex align-items-start">
+                                                                        <div style="position: relative;">
+                                                                            <img src="assets/images/faces/face23.jpg"
+                                                                                style="width: 60px; height: 60px; border-radius: 50%;">
+                                                                            <span
+                                                                                style="width: 12px; height: 12px; background-color: red; border-radius: 50%; position: absolute; top: 0; right: 0; border: 2px solid white;"></span>
+                                                                        </div>
+                                                                        <div class="ms-3">
+                                                                            <p class="card-title card-title-dash mb-1"
+                                                                                style="font-size: 1rem;">Henry Bronze
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="mt-2">
+                                                                        <p class="mb-1 fw-medium">Position: Recruiter
+                                                                        </p>
+                                                                        <p class="mb-1 fw-medium"><b>9</b></p>
+                                                                        <p>Active jobs</p>
+                                                                        <p class="mb-1 fw-medium"><b>15</b></p>
+                                                                        <p>Applicants</p>
+                                                                        <p class="mb-1 fw-medium"><b>6</b></p>
+                                                                        <p>Interviews</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                                <!-- container-scroller -->
+                                <!-- plugins:js -->
+                                <script src="assets/vendors/js/vendor.bundle.base.js"></script>
+                                <script src="assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+                                <!-- endinject -->
+                                <!-- Plugin js for this page -->
+                                <script src="assets/vendors/chart.js/chart.umd.js"></script>
+                                <script src="assets/vendors/progressbar.js/progressbar.min.js"></script>
+                                <!-- End plugin js for this page -->
+                                <!-- inject:js -->
+                                <script src="assets/js/off-canvas.js"></script>
+                                <script src="assets/js/template.js"></script>
+                                <script src="assets/js/settings.js"></script>
+                                <script src="assets/js/hoverable-collapse.js"></script
+                    <script src="assets/js/todolist.js"></script>
+                                <!-- endinject -->
+                                <!-- Custom js for this page-->
+                                <script src="assets/js/jquery.cookie.js" type="text/javascript"></script>
+                                <script src="assets/js/dashboard.js"></script>
+                                <!-- <script src="assets/js/Chart.roundedBarCharts.js"></script> -->
+                                <!-- End custom js for this page-->
+
+                                <script>
+                                    function updateClock() {
+                                        const clockElement = document.getElementById('clock');
+                                        const now = new Date();
+
+                                        // Get hours, minutes, and seconds
+                                        let hours = now.getHours();
+                                        let minutes = now.getMinutes();
+                                        let seconds = now.getSeconds();
+                                        let period = 'AM';
+
+                                        // Convert to 12-hour format
+                                        if (hours >= 12) {
+                                            period = 'PM';
+                                            hours = hours > 12 ? hours - 12 : hours; // Convert 13-23 hours to 1-11 PM
+                                        }
+                                        if (hours === 0) {
+                                            hours = 12; // Midnight edge case (0:00 should be 12 AM)
+                                        }
+
+                                        // Ensure 2-digit format for minutes and seconds
+                                        minutes = minutes < 10 ? '0' + minutes : minutes;
+                                        seconds = seconds < 10 ? '0' + seconds : seconds;
+
+                                        // Update clock display
+                                        clockElement.textContent = `${hours}:${minutes}:${seconds} ${period}`;
+                                    }
+
+                                    // Update the clock every second
+                                    setInterval(updateClock, 1000);
+
+                                    // Initialize the clock display immediately
+                                    updateClock();
+                                </script>
+                               
+                                <script>
+                                    // Function to hide all sections
+                                    function hideAllSections() {
+                                        document.getElementById('place1-details').style.display = 'none';
+                                        document.getElementById('place2-details').style.display = 'none';
+                                        document.getElementById('admin1-details').style.display = 'none';
+                                        document.getElementById('staff1-details').style.display = 'none';
+                                        document.getElementById('admin2-details').style.display = 'none';
+                                        document.getElementById('staff2-details').style.display = 'none';
+                                    }
+
+                                    // Show Place 1 details on click
+                                    document.getElementById('place1').addEventListener('click', function () {
+                                        hideAllSections();
+                                        document.getElementById('place1-details').style.display = 'flex';
+                                    });
+
+                                    // Show Place 2 details on click
+                                    document.getElementById('place2').addEventListener('click', function () {
+                                        hideAllSections();
+                                        document.getElementById('place2-details').style.display = 'flex';
+                                    });
+
+                                    // Show Admin 1 details on click
+                                    document.getElementById('admin1-card').addEventListener('click', function () {
+                                        hideAllSections();
+                                        document.getElementById('admin1-details').style.display = 'block';
+                                    });
+
+                                    // Show Staff 1 details on click
+                                    document.getElementById('staff1-card').addEventListener('click', function () {
+                                        hideAllSections();
+                                        document.getElementById('staff1-details').style.display = 'block';
+                                    });
+
+                                    // Show Admin 2 details on click
+                                    document.getElementById('admin2-card').addEventListener('click', function () {
+                                        hideAllSections();
+                                        document.getElementById('admin2-details').style.display = 'block';
+                                    });
+
+                                    // Show Staff 2 details on click
+                                    document.getElementById('staff2-card').addEventListener('click', function () {
+                                        hideAllSections();
+                                        document.getElementById('staff2-details').style.display = 'block';
+                                    });
+                                </script>
+
+
+</body>
+
+</html>

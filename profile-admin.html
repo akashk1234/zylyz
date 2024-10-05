@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Zylyz Consultancy Global Pvt Ltd</title>
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="assets/vendors/feather/feather.css">
+    <link rel="stylesheet" href="assets/vendors/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="assets/vendors/ti-icons/css/themify-icons.css">
+    <link rel="stylesheet" href="assets/vendors/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/vendors/typicons/typicons.css">
+    <link rel="stylesheet" href="assets/vendors/simple-line-icons/css/simple-line-icons.css">
+    <link rel="stylesheet" href="assets/vendors/css/vendor.bundle.base.css">
+    <link rel="stylesheet" href="assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" href="assets/vendors/datatables.net-bs4/dataTables.bootstrap4.css">
+    <link rel="stylesheet" type="text/css" href="assets/js/select.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- endinject -->
+    <link rel="shortcut icon" href="assets/images/favicon.png" />
+</head>
+
+<body class="with-welcome-text">
+    <div class="container-scroller">
+        <div class="row p-0 m-0 proBanner" id="proBanner">
+            <!-- <div class="col-md-12 p-0 m-0">
+                <div class="card-body card-body-padding px-3 d-flex align-items-center justify-content-between">
+                    <div class="ps-lg-3">
+                        <div class="d-flex align-items-center justify-content-between"></div>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between">
+                        <a href="https://www.bootstrapdash.com/product/star-admin-pro/"><i class="ti-home me-3 text-white"></i></a>
+                        <button id="bannerClose" class="btn border-0 p-0">
+                            <i class="ti-close text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+        <!-- Navbar -->
+        <nav class="navbar default-layout col-lg-12 col-12 p-0 fixed-top d-flex align-items-top flex-row">
+            <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-start">
+                <div class="me-3">
+                    <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-bs-toggle="minimize">
+                        <span class="icon-menu"></span>
+                    </button>
+                </div>
+                <div>
+                    <a class="navbar-brand brand-logo" href="index.html">
+                        <h2>ZYLYZ</h2>
+                    </a>
+                </div>
+            </div>
+            <div class="navbar-menu-wrapper d-flex align-items-top">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item d-none d-lg-block">
+                        <div id="clock-container" class="input-group date datepicker navbar-date-picker">
+                            <span class="input-group-addon input-group-prepend border-right">
+                                <i class="fas fa-clock input-group-text calendar-icon"></i>
+                            </span>
+                            <span id="clock" class="form-control">00:00:00 AM</span>
+                        </div>
+                    </li>
+                    <li class="nav-item d-none d-lg-block">
+                        <div id="datepicker-popup" class="input-group date datepicker navbar-date-picker">
+                            <span class="input-group-addon input-group-prepend border-right">
+                                <span class="icon-calendar input-group-text calendar-icon"></span>
+                            </span>
+                            <input type="text" class="form-control">
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <form class="search-form" action="#">
+                            <i class="icon-search"></i>
+                            <input type="search" class="form-control" placeholder="Search Here" title="Search here">
+                        </form>
+                    </li>
+                    <li class="nav-item dropdown d-none d-lg-block user-dropdown">
+                        <a class="nav-link" id="UserDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img class="img-xs rounded-circle" src="assets/images/faces/face8.jpg" alt="Profile image">
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
+                            <div class="dropdown-header text-center">
+                                <img class="img-md rounded-circle" src="assets/images/faces/face8.jpg" alt="Profile image">
+                                <p class="mb-1 mt-3 fw-semibold">Allen Moreno</p>
+                                <p class="fw-light text-muted mb-0">allenmoreno@gmail.com</p>
+                            </div>
+                            <a class="dropdown-item"><i class="dropdown-item-icon mdi mdi-account-outline text-primary me-2"></i> My Profile</a>
+                            <a class="dropdown-item" id="sign-out-link">
+                                <i class="dropdown-item-icon mdi mdi-power text-primary me-2"></i>
+                                <div id="app">
+                                    <button id="logout-button" class="btn btn-logout">Logout</button>
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-bs-toggle="offcanvas">
+                <span class="mdi mdi-menu"></span>
+            </button>
+        </nav>
+
+        <div class="container-fluid page-body-wrapper" style="margin-left: 250px; padding-top: 110px;">
+            <!-- Sidebar -->
+            <nav class="sidebar sidebar-offcanvas" id="sidebar" style="position: fixed; top: 0; left: 0; height: 100%; width: 250px; z-index: 1000; overflow-y: auto; padding-top: 110px; background-color: #e9e6e6; color: #343a40;">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            <i class="mdi mdi-grid-large menu-icon"></i>
+                            <span class="menu-title">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="invoice.html">
+                            <i class="menu-icon fas fa-file-invoice-dollar"></i>
+                            <span class="menu-title">New Invoice </span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="candidate.html">
+                            <i class="menu-icon fas fa-user-tie"></i>
+                            <span class="menu-title">Candidate</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="client.html">
+                            <i class="menu-icon fas fa-building"></i>
+                            <span class="menu-title">Clients</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="scheduling.html">
+                            <i class="menu-icon fas fa-calendar-alt"></i>
+                            <span class="menu-title">Interview Schedule</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="progress.html">
+                            <i class="menu-icon fas fa-tasks"></i>
+                            <span class="menu-title">Interview Progress</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="user.html">
+                            <i class="menu-icon fas fa-user"></i>
+                            <span class="menu-title">User</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pool.html">
+                            <i class="menu-icon fas fa-user"></i>
+                            <span class="menu-title">Pool</span>
+                        </a>
+                    </li> 
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="report1.html">
+                            <i class="menu-icon fas fa-chart-bar"></i>
+                            <span class="menu-title">Report & Analytics</span>
+                        </a>
+                    </li>  -->
+                </ul>
+            </nav>
+
+            <div class="main-panel">
+                <div class="content-wrapper  ">
+                    <div class="profile-info" style="background-color: white; padding: 20px; border-radius: 8px; margin-top: 0px; position: relative;">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img src="images/person_3.jpg" alt="Profile Image" class="img-fluid rounded-circle" style="width: 150px; height: 150px; object-fit: cover;">
+                            </div>
+                            <div class="col-md-8">
+                                <h3><b>Allen Moreno</b></h3>
+                                <p><b>Email:</b> allenmoreno@gmail.com</p>
+                                <p><b>Phone:</b> 123-456-7890</p>
+                                <p><b>Position:</b> Software Engineer</p>
+                                <p><b>LinkedIn:</b> <a href="https://linkedin.com/in/johndavid" style="color: #007bff;">linkedin.com/in/johndavid</a></p>
+                                <p><b>GitHub:</b> <a href="https://github.com/johndavid" style="color: #007bff;">github.com/johndavid</a></p>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editProfileModal" 
+                        style="position: absolute; top: 10px; right: 10px; padding: 5px 10px; font-size: 15px; height: 40px; width: 80px;">
+                        Edit
+                    </button>
+                    
+                    </div>
+                    
+                    <!-- Edit Profile Modal -->
+                    <div class="modal fade" id="editProfileModal" tabindex="-1" aria-labelledby="editProfileModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="editProfileModalLabel">Edit Profile</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="mb-3">
+                                            <label for="editName" class="form-label">Name</label>
+                                            <input type="text" class="form-control" id="editName" value="Allen Moreno">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="editEmail" class="form-label">Email</label>
+                                            <input type="email" class="form-control" id="editEmail" value="allenmoreno@gmail.com">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="editPhone" class="form-label">Phone</label>
+                                            <input type="text" class="form-control" id="editPhone" value="123-456-7890">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="editPosition" class="form-label">Position</label>
+                                            <input type="text" class="form-control" id="editPosition" value="Software Engineer">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="editLinkedIn" class="form-label">LinkedIn</label>
+                                            <input type="text" class="form-control" id="editLinkedIn" value="https://linkedin.com/in/johndavid">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="editGitHub" class="form-label">GitHub</label>
+                                            <input type="text" class="form-control" id="editGitHub" value="https://github.com/johndavid">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- <h2 style="margin: 30px 0; text-align: center;"><b>Available Candidates</b></h2> -->
+                    <div class="table-responsive  mt-4">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Role</th>
+                                <th>Number of clients<br> assigned</th>
+                                <th>Number of candidates<br> assigned</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>John Doe</td>
+                                <td>
+                                    <div class="dropdown">
+                                        <button class="btn btn-secondary dropdown-toggle btn-sm" type="button" id="statusDropdown1" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <span id="statusText1">Recruiter</span>
+                                        </button>
+                                        <ul class="dropdown-menu" aria-labelledby="statusDropdown1">
+                                            <li><a class="dropdown-item" href="#" onclick="selectRole(1, 'Admin')">Admin</a></li>
+                                            <li><a class="dropdown-item" href="#" onclick="selectRole(1, 'Staff 1')">Recruiter</a></li>
+                                            <li><a class="dropdown-item" href="#" onclick="selectRole(1, 'Staff 2')">Sales</a></li>
+                                        </ul>
+                                    </div>
+                                </td>
+                                <td>8</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td>Jane Smith</td>
+                                <td>
+                                    <div class="dropdown">
+                                        <button class="btn btn-secondary dropdown-toggle btn-sm" type="button" id="statusDropdown2" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <span id="statusText2">Recruiter</span>
+                                        </button>
+                                        <ul class="dropdown-menu" aria-labelledby="statusDropdown2">
+                                            <li><a class="dropdown-item" href="#" onclick="selectRole(2, 'Admin')">Admin</a></li>
+                                            <li><a class="dropdown-item" href="#" onclick="selectRole(2, 'Staff 1')">Recruiter</a></li>
+                                            <li><a class="dropdown-item" href="#" onclick="selectRole(2, 'Staff 2')">Sales</a></li>
+                                        </ul>
+                                    </div>
+                                </td>
+                                <td>20</td>
+                                <td>24</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- plugins:js -->
+
+    <script src="assets/vendors/js/vendor.bundle.base.js"></script>
+    <script src="assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+    <script src="assets/vendors/datatables.net/jquery.dataTables.js"></script>
+    <script src="assets/vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
+    <script src="assets/js/dashboard.js"></script>
+    <script src="assets/js/data-table.js"></script>
+    <script src="assets/js/clock.js"></script>
+    <script src="assets/js/off-canvas.js"></script>
+    <script src="assets/js/hoverable-collapse.js"></script>
+    <script src="assets/js/template.js"></script>
+    <script src="assets/js/settings.js"></script>
+    <script src="assets/js/todolist.js"></script>
+    <script>
+        function updateClock() {
+          const clockElement = document.getElementById('clock');
+          const now = new Date();
+      
+          // Get hours, minutes, and seconds
+          let hours = now.getHours();
+          let minutes = now.getMinutes();
+          let seconds = now.getSeconds();
+          let period = 'AM';
+      
+          // Convert to 12-hour format
+          if (hours >= 12) {
+            period = 'PM';
+            hours = hours > 12 ? hours - 12 : hours; // Convert 13-23 hours to 1-11 PM
+          }
+          if (hours === 0) {
+            hours = 12; // Midnight edge case (0:00 should be 12 AM)
+          }
+      
+          // Ensure 2-digit format for minutes and seconds
+          minutes = minutes < 10 ? '0' + minutes : minutes;
+          seconds = seconds < 10 ? '0' + seconds : seconds;
+      
+          // Update clock display
+          clockElement.textContent = `${hours}:${minutes}:${seconds} ${period}`;
+        }
+      
+        // Update the clock every second
+        setInterval(updateClock, 1000);
+      
+        // Initialize the clock display immediately
+        updateClock();
+      </script>
+</body>
+
+</html>
